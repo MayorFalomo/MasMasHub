@@ -721,7 +721,6 @@ ul li a:hover {
 
 form {
     position: relative;
-    border: 2px red solid;
 }
 
 .newsLetter p {
@@ -833,7 +832,6 @@ form {
         justify-content: center;
         flex-direction: column;
         flex-wrap: wrap;
-        border: 2px yellow solid;
     }
 
     .featureContain {
@@ -967,5 +965,8 @@ form {
     .hero-section {
         display: flex;
         flex-direction: column;
+    }
+    .hero-text h1{
+        font-size: 32px;
     }
 }
