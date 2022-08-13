@@ -109,11 +109,7 @@ ul li a:hover {
     border-radius: 50%;
 }
 .play {
-	/* background: black; */
 	border-radius: 50%;
-	/* margin: 10px;
-	height: 20px;
-	width: 20px; */
 	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
 	transform: scale(1);
 	animation: pulse 2s infinite;
@@ -123,16 +119,19 @@ ul li a:hover {
 	0% {
 		transform: scale(0.95);
 		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+
 	}
 
 	70% {
 		transform: scale(1);
 		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+
 	}
 
 	100% {
 		transform: scale(0.95);
 		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+
 	}
 }
 
@@ -622,7 +621,7 @@ ul li a:hover {
 }
 
 .action {
-    max-width: 40%;
+    max-width: 90%;
     line-height: 25px;
 }
 
@@ -714,7 +713,7 @@ ul li a:hover {
 
 .newsLetter {
     line-height: 25px;
-    max-width: 60%;
+    max-width: 100%;
     padding: 40px;
     margin: auto;
     color: white;
@@ -722,6 +721,7 @@ ul li a:hover {
 
 form {
     position: relative;
+    border: 2px red solid;
 }
 
 .newsLetter p {
