@@ -1,0 +1,971 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Alata&family=Barlow:wght@600&family=Cabin:wght@500&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter:wght@600&family=Josefin+Sans:wght@300;400;600&family=League+Spartan:wght@400;500;700&family=Manrope:wght@300&family=Rubik&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "rubik", sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.app {
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding-top: 30px;
+    background-color: #FDFFF1;
+    position: relative;
+}
+
+.container {
+    background-color: #FDFFF1;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+ul li:hover {
+    color: #FF6100;
+}
+
+ul li a:hover {
+    color: #FF7926;
+}
+
+.hamburgerLines .bars {
+    display: flex;
+    height: 3px;
+    width: 30px;
+    margin: 3px;
+    border-radius: 10px;
+    background: #0e2431;
+    cursor: pointer;
+}
+
+.hamburgerLines {
+    display: none;
+}
+
+.signUp {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #FF6100;
+    color: white;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.try {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.try button {
+    padding: 10px 30px;
+    color: white;
+    background-color: #FF6100;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.try button:hover{
+    background-color:#fff;
+    color: black;
+    border: 1px #FF6100 solid;
+}
+
+.play i {
+    font-size: 15px;
+    background-color: transparent;
+    color: #FF6100;
+    padding: 10px 15px;
+    box-shadow: rgb(227, 88, 9, 0.2) 0px 2px 8px 0px;
+    border-radius: 50%;
+}
+.play {
+	/* background: black; */
+	border-radius: 50%;
+	/* margin: 10px;
+	height: 20px;
+	width: 20px; */
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	transform: scale(1);
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+.birds {
+    max-width: 15%;
+    position: absolute;
+    top: 70px;
+    right: 350px;
+    animation-name: flying;
+    animation-duration: 20s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+}
+
+@keyframes flying {
+    0% {
+        transform: translateX(0px);
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateX(100px);
+        transform: translateY(50px);
+    }
+
+    25% {
+        transform: translateX(300px);
+        transform: translateY(40px);
+    }
+
+    50% {
+        transform: translateX(300px);
+        transform: translateY(20px);
+    }
+
+    75% {
+        transform: translateX(150px);
+        transform: translateY(90px);
+    }
+
+    100% {
+        transform: translateX(200px);
+        transform: translateY(30px);
+    }
+}
+
+.hero-section img {
+    width: 100%;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.hero-section h1 {
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.hero-text {
+    line-height: 25px;
+    padding: 30px;
+}
+
+.hero-text p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.partnerLogos img {
+    width: 100%;
+}
+
+.partners {
+    text-align: center;
+    width: 90%;
+    margin: 40px auto;
+}
+
+.partnerLogos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 40px;
+}
+
+.partnerLogos {
+    position: relative;
+    transform: translateX(0px);
+    opacity: 0;
+    transition: all 8s ease;
+}
+
+.partnerLogos:active {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+
+.numberOne i {
+    padding: 10px;
+    background-color: #FF6100;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    /* width: 50px; */
+}
+
+.numberOne button {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    border: none;
+    box-shadow: rgb(227, 88, 9, 0.2) 0px 2px 8px 0px;
+    margin: 30px;
+}
+
+.track-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    line-height: 25px;
+    background-image: url(/images/Ellipse\ 4.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    padding: 50px;
+}
+
+.track-section img {
+    width: 100%;
+}
+
+.trackOne {
+    width: 20%;
+    min-width: 30%;
+}
+
+.trackTwo {
+    width: 20%;
+    min-width: 30%;
+    margin-bottom: 200px;
+}
+
+.features {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.manage {
+    width: 40%;
+    line-height: 25px;
+}
+
+.robot img {
+    max-width: 300px;
+}
+
+.featureContain {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.featureContain h3 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.features-section {
+    background-color: #FF6100;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    color: #bbb;
+}
+
+.features-section h3 {
+    color: white;
+}
+
+.features-section h2 {
+    margin-left: 10%;
+    padding-top: 80px;
+}
+
+.testimonials {
+    padding-top: 70px;
+    position: relative;
+    background-color: #FDFFF1;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.slider {
+    display: flex;
+    text-align: left;
+}
+
+.profile #picture {
+    border-radius: 50%;
+}
+
+.comment {
+    text-align: left;
+    width: 60%;
+    text-align: center;
+    line-height: 25px;
+    font-size: 14px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    transition: 0.4s ease-in-out;
+    margin: auto;
+    transition: 0.5s ease-in;
+    padding: 30px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.indicator .btn {
+    background-color: grey;
+    width: 10px;
+    height: 11px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicator .btn:hover {
+    background-color: #FF6100;
+}
+
+.indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 40px;
+}
+
+
+.planes {
+    width: 120px;
+    position: absolute;
+    left: 0;
+    top: -300px;
+    animation-name: aeroplane;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    min-height: 400px;
+    gap: 2rem;
+    margin: 100px auto;
+    perspective: 1000px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.teamMates {
+    min-width: 300px;
+    min-height: 300px;
+    text-align: center;
+    line-height: 25px;
+    transition: transition 1s;
+    transform-style: preserve-3d;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.teamMates:hover {
+    transform: rotateY(180deg);
+    transition: transform 0.5s;
+}
+
+#flip-card-front,
+.flip-card-back {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    width: 100%;
+}
+
+.teamMates:hover .flip-card-back {
+    transform: rotateY(180deg);
+}
+
+#front-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #FF6100;
+    color: white;
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flip-card-back p {
+    padding: 20px;
+}
+
+.team {
+    position: relative;
+    margin: auto;
+}
+
+#flip-card-front img {
+    max-width: 250px;
+}
+
+.planes {
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    text-align: center;
+    animation-name: Myanime;
+}
+
+
+@keyframes Myanime {
+    0% {
+        transform: translateX(0px);
+        transform: translateY(50px);
+    }
+
+    25% {
+        transform: translateX(400px);
+        transform: translateY(100px);
+    }
+
+    50% {
+        transform: translateX(800px);
+        transform: translateY(150px);
+        transform: rotateX(360deg);
+
+    }
+
+    75% {
+        transform: translateX(1200px);
+        transform: translateY(200px);
+        transform: rotate3d(90deg);
+    }
+
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+.halfPlanes img {
+    width: 100px;
+    position: absolute;
+    left: -150px;
+}
+
+.name {
+    padding-top: 20px;
+}
+
+.leftVector {
+    width: 40%;
+    position: absolute;
+    left: 0px;
+    top: 650px;
+    opacity: 0.3;
+}
+
+.rightVector {
+    width: 40%;
+    position: absolute;
+    right: 10px;
+    top: 400px;
+    opacity: 0.3;
+}
+
+.pricing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 1rem;
+    padding: 40px;
+    width: 80%;
+    margin: auto;
+}
+
+.carden {
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 30px;
+    line-height: 25px;
+    border-radius: 5px;
+}
+
+#centreCard {
+    width: 300px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #FF6100;
+    color: white;
+    line-height: 25px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 20px;
+    color: #FF6100;
+}
+
+.cost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 20px;
+}
+
+.basic img {
+    padding: 20px;
+    max-width: 100%;
+}
+
+.hero-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: #FF6100;
+    color: white;
+    width: 80%;
+    margin: auto;
+    padding: 40px;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.hero-dog {
+    max-width: 40%;
+}
+
+.hero-dog img {
+    width: 100%;
+}
+
+.action {
+    max-width: 40%;
+    line-height: 25px;
+}
+
+.action p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.action .know {
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    color: #FF6100;
+    background-color: #FFF;
+}
+
+#faq {
+    background-color: #FCEFE7;
+}
+
+.faq-section {
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+    line-height: 25px;
+}
+
+.faq {
+    background-color: transparent;
+    border-top: 1px black solid;
+    padding: 10px;
+    position: relative;
+    line-height: 25px;
+    transition: 0.4s ease-in-out;
+    overflow: hidden;
+}
+
+.faq.active {
+    background-color: #FF6100;
+    color: white;
+    transition: all 0.4s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faqBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.faq-toggle {
+    display: none;
+}
+
+.faq.active .faq-toggle {
+    display: block;
+}
+
+.faqBtn .fa-angle-up {
+    display: none;
+}
+
+.faqBtn .fa-chevron-down {
+    outline: none;
+    border: none;
+}
+
+.faq.active .faqBtn {
+    border-radius: 40px;
+}
+
+.faq.active .faqBtn .fa-angle-up {
+    display: block;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.faq.active .faqBtn .fa-chevron-down {
+    display: none;
+}
+
+
+.newsLetter {
+    line-height: 25px;
+    max-width: 60%;
+    padding: 40px;
+    margin: auto;
+    color: white;
+}
+
+form {
+    position: relative;
+}
+
+.newsLetter p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.newsLetter form .email {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #FF7926;
+    color: white;
+}
+
+.email::placeholder {
+    color: white;
+}
+
+.newsLetter form .signBtn {
+    padding: 10px 20px;
+    color: #FF6100;
+    background-color: white;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 15px;
+    position: absolute;
+    left: 170px;
+    top: 0;
+    border: none;
+    outline: none;
+
+}
+
+.news {
+    background-color: #FF6100;
+    position: relative;
+    padding: 50px;
+}
+
+
+.clouds {
+    position: absolute;
+    right: 0px;
+    top: 40px;
+    width: 40%;
+}
+
+.clouds img {
+    max-width: 100%;
+}
+
+.cloud {
+    position: absolute;
+    top: 90px;
+    left: 0px;
+}
+
+.cloud img {
+    max-width: 100%;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 25px;
+    padding: 60px;
+}
+
+.footer-sect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #FF6100;
+}
+
+.socials i:hover {
+    font-size: 20px;
+    transition: 0.4s ease;
+}
+
+.rights {
+    display: flex;
+    justify-content: center;
+    border-top: 1px black solid;
+    padding: 30px;
+    opacity: 0.5;
+}
+
+@media (max-width:800px) {
+    .features-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border: 2px yellow solid;
+    }
+
+    .featureContain {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .track-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .trackOne {
+        min-width: 100%;
+    }
+
+    .trackTwo {
+        min-width: 100%;
+    }
+
+    .manage {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+
+    .hero-card {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .know {
+        margin: auto;
+        display: flex;
+    }
+
+    .footer-flex {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        line-height: 35px;
+        width: 100%;
+    }
+
+    .follow {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:700px) {
+
+    .hamburgerLines.active .bars:first-child {
+        transition: transform 0.4s ease-in-out;
+        transform: rotate(45deg) translate(3px, 7px);
+    }
+
+    .hamburgerLines.active .bars:nth-child(2) {
+        transition: transform 0.2s ease-in-out;
+        opacity: 0;
+    }
+
+    .hamburgerLines.active .bars:nth-child(3) {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+        transform: rotate(-45deg) translate(-2px, 6px);
+    }
+
+    .container {
+        position: relative;
+    }
+
+    nav .navBar {
+        top: -100vw;
+        transition: 0.5s ease;
+        position: absolute;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .hamburgerLines {
+        display: block;
+    }
+
+    nav .navBar.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        position: fixed;
+        right: 0;
+        top: 0px;
+        width: 100%;
+        background-color: #fff;
+        height: 60%;
+        z-index: 999;
+    }
+
+    .hamburgerLines.active {
+        z-index: 9876543;
+        position: fixed;
+        transition: all 0.4s ease;
+        right: 0;
+    }
+
+    .navBar.active li button {
+        background-color: #FF7926;
+        color: black;
+    }
+
+}
+
+@media (max-width: 570px) {
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+    }
+}
